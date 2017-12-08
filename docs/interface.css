@@ -10,5 +10,9 @@ form{
  border-style: outset;
  min-height: 400px;
  padding: 20px;
+ 
+}
+
+input, form {
  font-size: 20pt;
 }
