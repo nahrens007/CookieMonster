@@ -6,10 +6,12 @@ var firstName;
 
 function setName() {                                                          //After someone enters there name, this removes the field and
   firstName = document.getElementById("fName").value;                         //Adds info
-  document.getElementById("nameFields").innerHTML = "Name: " + firstName;     //https://www.w3schools.com/jsref/dom_obj_style.asp
+  document.getElementById("nameFields").innerHTML = "";     //https://www.w3schools.com/jsref/dom_obj_style.asp
   document.getElementById("nameFields").style.fontSize = "150%";
-  document.getElementById("position").innerHTML = "Position: Amateur";
   document.getElementById("position").style.fontSize = "150%";
+  document.getElementById("heading").innerHTML = "Cookie Monster &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " +
+                    "Name: " + firstName +  "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Position: Amateur";
+
 }
 
 /*
