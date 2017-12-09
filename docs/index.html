@@ -2,28 +2,36 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <title>Cookie  Monster</title>
+
+    <!-- load css pages -->
     <link rel="stylesheet" type="text/css" href="interface.css" />
-    <title> Cookie  Monster m.1</title>
+
+    <!-- load javascript -->
+    <script type="text/javascript" src="main.js"></script>
+
   </head>
 
   <body>
-    <h1>Cookie Monster</h1><br>
+    <h1>Cookie Monster</h1>
 
-    <span id="nameFields">
+    <div id="nameFields">
+
+      <form class="rounded" onsubmit="setName()">
+        Enter name: <input class="rounded" id="fName" type="text" name ="fname"><br />
+        <input class="rounded" name="button" type="submit"/>
+      </form>
+
+    </div>
 
 
+    <div id="position">
 
-	<form onsubmit="setName()">
-		Enter name: <input class="rounded" id="fName" type="text" name ="fname">
-		<input class="rounded" name="button" type="submit">
-	</form>
+    </div>
 
-    </span><br />
-
-    <span id="position">
-
-    </span>
-
+    <div id="game">
+      <p>I AM THE GAME</p>
+    </div>
 
     <!--
     <button type="button" onclick="cookieClick(1)">Click Me!</button><br />
@@ -32,9 +40,9 @@
     <button type="button" onclick="buyCursor()">Buy Cursor</button><br  />
     Cursors: <span id="cursors">0</span><br />
     Cost: <span id="cursorCost">10</span>
--->
+    -->
 
 
-    <script type="text/javascript" src="main.js"></script>
+
   </body>
 </html>

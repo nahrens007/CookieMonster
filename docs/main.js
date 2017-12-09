@@ -5,11 +5,14 @@ var cursorCost = 0;
 var firstName;
 
 function setName() {                                                          //After someone enters there name, this removes the field and
-  firstName = document.getElementById("fName").value;                         //Adds info
-  document.getElementById("nameFields").innerHTML = "Name: " + firstName;     //https://www.w3schools.com/jsref/dom_obj_style.asp
+
+  document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
+
+  firstName = document.getElementById("fName").value;                         // Retrieves name from user
   document.getElementById("nameFields").style.fontSize = "150%";
-  document.getElementById("position").innerHTML = "Position: Amateur";
   document.getElementById("position").style.fontSize = "150%";
+  document.getElementById("nameFields").innerHTML = "Name: " + firstName;     //https://www.w3schools.com/jsref/dom_obj_style.asp
+  document.getElementById("position").innerHTML = "Position: Amateur";
 }
 
 /*
