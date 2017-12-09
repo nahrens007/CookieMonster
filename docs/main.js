@@ -6,13 +6,54 @@ var firstName;
 
 function setName() {                                                          //After someone enters there name, this removes the field and
 
-  document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
-
   firstName = document.getElementById("fName").value;                         // Retrieves name from user
+
+  document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
   document.getElementById("nameFields").style.fontSize = "150%";
   document.getElementById("position").style.fontSize = "150%";
   document.getElementById("nameFields").innerHTML = "Name: " + firstName;     //https://www.w3schools.com/jsref/dom_obj_style.asp
   document.getElementById("position").innerHTML = "Position: Amateur";
+
+  document.cookie = "name=" + firstName + "; expires=Sat, 8 Dec 2017 03:15:00 UTC";
+}
+
+/* return the cookie at name cname: https://www.w3schools.com/js/js_cookies.asp */
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+/* Load the cookies */
+function loadCookies() {
+  firstName = getCookie("name");
+  // set the name to name from cookies
+  if (firstName.length != 0)
+  {
+    document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
+    document.getElementById("nameFields").style.fontSize = "150%";
+    document.getElementById("position").style.fontSize = "150%";
+    document.getElementById("nameFields").innerHTML = "Name: " + firstName;     //https://www.w3schools.com/jsref/dom_obj_style.asp
+    document.getElementById("position").innerHTML = "Position: Amateur";
+    document.getElementById("nameFields").style.display = "block";
+  } else {
+    document.getElementById("nameFields").style.display = "block";
+  }
+}
+
+/* runs on HTML body onLoad event */
+function bodyOnLoad() {
+  loadCookies();
 }
 
 /*
