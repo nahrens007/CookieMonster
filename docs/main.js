@@ -14,7 +14,8 @@ function setName() {                                                          //
   document.getElementById("nameFields").innerHTML = "Name: " + firstName;     //https://www.w3schools.com/jsref/dom_obj_style.asp
   document.getElementById("position").innerHTML = "Position: Amateur";
 
-  document.cookie = "name=" + firstName + "; expires=Sat, 8 Dec 2017 03:15:00 UTC";
+  setCookie("name", firstName, 30);
+  alert("set cookie " + firstName);
 }
 
 /* return the cookie at name cname: https://www.w3schools.com/js/js_cookies.asp */
@@ -34,21 +35,27 @@ function getCookie(cname) {
     return "";
 }
 
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
 /* Load the cookies */
 function loadCookies() {
   firstName = getCookie("name");
+  alert("Name: " + firstName);
   // set the name to name from cookies
-  if (firstName.length != 0)
+  if (firstName != "")
   {
     document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
     document.getElementById("nameFields").style.fontSize = "150%";
     document.getElementById("position").style.fontSize = "150%";
     document.getElementById("nameFields").innerHTML = "Name: " + firstName;     //https://www.w3schools.com/jsref/dom_obj_style.asp
     document.getElementById("position").innerHTML = "Position: Amateur";
-    document.getElementById("nameFields").style.display = "block";
-  } else {
-    document.getElementById("nameFields").style.display = "block";
   }
+  document.getElementById("nameFields").style.display = "block";
 }
 
 /* runs on HTML body onLoad event */
