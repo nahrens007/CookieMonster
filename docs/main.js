@@ -1,7 +1,8 @@
 var cookies = 0;
 var cursors = 0;
 var cursorCost = 0;
-var firstName;
+var firstName,position;
+var hideHeading = true;          //Boolean Variables
 
 function setName() {                                                          //After someone enters there name, this removes the field and
 
@@ -10,10 +11,28 @@ function setName() {                                                          //
   document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
   document.getElementById("nameFields").style.fontSize = "150%";
   document.getElementById("position").style.fontSize = "150%";
-  document.getElementById("nameFields").innerHTML = "Name: " + firstName;     //https://www.w3schools.com/jsref/dom_obj_style.asp
-  document.getElementById("position").innerHTML = "Position: Amateur";
+  document.getElementById("nameFields").innerHTML = "";     //https://www.w3schools.com/jsref/dom_obj_style.asp
+
+
+  position = "Amateur";
+  hideHeading = false;
+
+  updateHeader();
+
+
 
   setCookie("name", firstName, 30);
+}
+/*Will update the information in the top header when we need it to*/
+function updateHeader(){
+
+  document.getElementById("gameName").innerHTML = "Cookie Monster";
+  document.getElementById("gamePlayer").innerHTML = "Name: " + firstName;
+  document.getElementById("gamePosition").innerHTML = "Position: " + position;
+
+  document.getElementById("gamePlayer").hidden = hideHeading;
+  document.getElementById("gamePosition").hidden = hideHeading;
+
 }
 
 /* return the cookie at name cname: https://www.w3schools.com/js/js_cookies.asp */

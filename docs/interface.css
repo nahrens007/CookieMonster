@@ -2,10 +2,23 @@
 body {
  background-color: lightgray;
  font-family: Arial;
+ margin:0;
+ padding: 0;
 }
-h1{
+
+#topHeading{
  color: black;
+ background-color: darkgrey ;
+ margin: 0px;
+ padding: 10px;
+ font-size: 140%
 }
+
+#gameName{
+
+  font-weight: bold;
+}
+
 form{
  border-style: outset;
  padding: 20px;
