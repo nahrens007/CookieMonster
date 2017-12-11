@@ -1,7 +1,7 @@
 var cookies = 0;
 
 var firstName,position;
-var hideHeading = true;          //Boolean Variables
+var hideHeading = "none";          //Boolean Variables
 
 function setName() {                                                          //After someone enters there name, this removes the field and
 
@@ -14,7 +14,7 @@ function setName() {                                                          //
 
 
   position = "Amateur";
-  hideHeading = false;
+  hideHeading = "inline";
 
   updateHeader();
 
@@ -31,8 +31,8 @@ function updateHeader(){
   document.getElementById("gamePlayer").innerHTML = "Name: " + firstName;
   document.getElementById("gamePosition").innerHTML = "Position: " + position;
 
-  document.getElementById("gamePlayer").hidden = hideHeading;
-  document.getElementById("gamePosition").hidden = hideHeading;
+  document.getElementById("gamePlayer").style.display = hideHeading;
+  document.getElementById("gamePosition").style.display = hideHeading;
 
 }
 
