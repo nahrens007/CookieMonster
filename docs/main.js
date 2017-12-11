@@ -74,7 +74,6 @@ function loadCookies() {
     document.getElementById("position").style.fontSize = "150%";
     document.getElementById("nameFields").innerHTML = "";
 
-      updateHeader();
 
     updateHeader();
     console.log(document.getElementById("headingVisibility").style.visibility);
