@@ -3,22 +3,23 @@ var cookies = 0;
 var firstName,position;
 var hideHeading = true;          //Boolean Variables
 
-function setName() {                                                          //After someone enters there name, this removes the field and
+function setStats(name, position) {
+
+}
+
+function setNameClick() {                                                          //After someone enters there name, this removes the field and
 
   firstName = document.getElementById("fName").value;                         // Retrieves name from user
 
   document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
-  document.getElementById("nameFields").style.fontSize = "150%";
+  document.getElementById("nameInputFields").style.fontSize = "150%";
   document.getElementById("position").style.fontSize = "150%";
-  document.getElementById("nameFields").innerHTML = "";     //https://www.w3schools.com/jsref/dom_obj_style.asp
-
+  document.getElementById("nameInputFields").innerHTML = "";     //https://www.w3schools.com/jsref/dom_obj_style.asp
 
   position = "Amateur";
   hideHeading = false;
 
   updateHeader();
-
-
 
   setCookie("name", firstName, 30);
   setCookie("position", position, 30);
@@ -68,20 +69,16 @@ function loadCookies() {
   // set the name to name from cookies
   if (firstName != "")
   {
-    document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
-    document.getElementById("nameFields").style.fontSize = "150%";
-    document.getElementById("position").style.fontSize = "150%";
-    document.getElementById("nameFields").innerHTML = "";
-
+      document.getElementById("nameInputFields").innerHTML = "";
       updateHeader();
+  }else {
+    document.getElementById("nameInputFields").style.display = "block";
   }
-  document.getElementById("nameFields").style.display = "block";
 }
 
 /* runs on HTML body onLoad event */
 function bodyOnLoad() {
   loadCookies();
-
 }
 
 /*
