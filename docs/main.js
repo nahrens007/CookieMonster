@@ -79,7 +79,8 @@ function loadCookies() {
   firstName = getCookie("name");
   hideHeading = getCookie("headingVisibility");
   position = getCookie("position");
-
+  console.log(hideHeading);
+	
   // set the name to name from cookies
   if (firstName != "")
   {
