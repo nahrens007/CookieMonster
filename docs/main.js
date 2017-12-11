@@ -62,6 +62,9 @@ function getCookie(cname) {
 /* Load the cookies */
 function loadCookies() {
   firstName = getCookie("name");
+  hideHeading = getCookie("headingVisibility");
+  position = getCookie("position");
+
   // set the name to name from cookies
   if (firstName != "")
   {
