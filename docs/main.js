@@ -1,41 +1,54 @@
-var cookies = 0;
-
 var firstName,position;
 var hideHeading = true;          //Boolean Variables
 
-function setStats(name, position) {
-
-}
-
+/* 
+setNameClick(): function is activated when the "submit" button is clicked on the name input form.
+This function is responsible for: 
+1) Retrieving the name from the input box in the name input form
+2) Setting the name and position variables
+3) Setting the name/position cookies
+4) Setting the visibility of the header (cookie and html/css).
+*/
 function setNameClick() {                                                          //After someone enters there name, this removes the field and
 
   firstName = document.getElementById("fName").value;                         // Retrieves name from user
+  
+  // if the firstName input field was empty, set it to a generic name.
+  if (firstName == "" || firstName == null){
+    firstName = "Guest";	  
+  }
 
   document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
-  document.getElementById("nameInputFields").style.fontSize = "150%";
-  document.getElementById("position").style.fontSize = "150%";
-  document.getElementById("nameInputFields").innerHTML = "";     //https://www.w3schools.com/jsref/dom_obj_style.asp
+  document.getElementById("nameInputFields").innerHTML = "";                  //https://www.w3schools.com/jsref/dom_obj_style.asp
 
-  position = "Amateur";
-  hideHeading = false;
+  position = "Amateur";                                                       // Clients always start as an amateur.
+  hideHeading = false;                                                        // The heading should not be hidden since the name and position are set.
 
-  updateHeader();
+  updateHeader();                                                             // Update the heading (name/position)
 
+  // Update the cookies
   setCookie("name", firstName, 30);
   setCookie("position", position, 30);
   setCookie("headingVisibility", hideHeading, 30);
 }
 
-/*Will update the information in the top header when we need it to*/
+/* 
+Will update the information in the top header when we need it to.
+*/
 function updateHeader(){
 
-  document.getElementById("gameName").innerHTML = "Cookie Monster";
   document.getElementById("gamePlayer").innerHTML = "Name: " + firstName;
   document.getElementById("gamePosition").innerHTML = "Position: " + position;
-
-  document.getElementById("gamePlayer").hidden = hideHeading;
-  document.getElementById("gamePosition").hidden = hideHeading;
-
+  
+  if (hideHeading)
+  {
+    document.getElementById("gamePlayer").style.display = "inline";
+    document.getElementById("gamePosition").style.display = "inline";
+  } else {
+    document.getElementById("gamePlayer").style.display = "none";
+    document.getElementById("gamePosition").style.display = "none";
+  }
+  
 }
 
 /* return the cookie at name cname: https://www.w3schools.com/js/js_cookies.asp */
@@ -73,7 +86,7 @@ function loadCookies() {
       document.getElementById("nameInputFields").innerHTML = "";
       updateHeader();
   }else {
-    document.getElementById("nameInputFields").style.display = "block";
+      document.getElementById("nameInputFields").style.display = "block";
   }
 }
 
