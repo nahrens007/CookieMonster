@@ -25,6 +25,7 @@ function setNameClick() {                                                       
   setCookie("position", position, 30);
   setCookie("headingVisibility", hideHeading, 30);
 }
+
 /*Will update the information in the top header when we need it to*/
 function updateHeader(){
 
