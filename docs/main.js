@@ -1,6 +1,5 @@
 var cookies = 0;
-var cursors = 0;
-var cursorCost = 0;
+
 var firstName,position;
 var hideHeading = true;          //Boolean Variables
 
@@ -22,6 +21,8 @@ function setName() {                                                          //
 
 
   setCookie("name", firstName, 30);
+  setCookie("position", position, 30);
+  setCookie("headingVisibility", hideHeading, 30);
 }
 /*Will update the information in the top header when we need it to*/
 function updateHeader(){
@@ -67,8 +68,9 @@ function loadCookies() {
     document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
     document.getElementById("nameFields").style.fontSize = "150%";
     document.getElementById("position").style.fontSize = "150%";
-    document.getElementById("nameFields").innerHTML = "Name: " + firstName;     //https://www.w3schools.com/jsref/dom_obj_style.asp
-    document.getElementById("position").innerHTML = "Position: Amateur";
+    document.getElementById("nameFields").innerHTML = "";
+
+      updateHeader();
   }
   document.getElementById("nameFields").style.display = "block";
 }
@@ -76,6 +78,7 @@ function loadCookies() {
 /* runs on HTML body onLoad event */
 function bodyOnLoad() {
   loadCookies();
+
 }
 
 /*
