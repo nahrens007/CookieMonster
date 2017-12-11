@@ -64,6 +64,7 @@ function loadCookies() {
   firstName = getCookie("name");
   hideHeading = getCookie("headingVisibility");
   position = getCookie("position");
+  console.log(hideHeading);
 
   // set the name to name from cookies
   if (firstName != "")
@@ -74,6 +75,10 @@ function loadCookies() {
     document.getElementById("nameFields").innerHTML = "";
 
       updateHeader();
+
+    updateHeader();
+    console.log(document.getElementById("headingVisibility").style.visibility);
+
   }
   document.getElementById("nameFields").style.display = "block";
 }
