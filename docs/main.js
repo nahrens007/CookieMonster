@@ -1,5 +1,5 @@
 var firstName,position;
-var hideHeading = "none";          //Boolean Variables
+var hideHeading;         
 
 /*
 setNameClick(): function is activated when the "submit" button is clicked on the name input form.
@@ -19,22 +19,12 @@ function setNameClick() {                                                       
   }
 
   document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
-<<<<<<< HEAD
-  document.getElementById("nameFields").style.fontSize = "150%";
-  document.getElementById("position").style.fontSize = "150%";
-  document.getElementById("nameFields").innerHTML = "";     //https://www.w3schools.com/jsref/dom_obj_style.asp
 
-
-  position = "Amateur";
-  hideHeading = "inline";
-
-  updateHeader();
-=======
   document.getElementById("nameInputFields").innerHTML = "";                  //https://www.w3schools.com/jsref/dom_obj_style.asp
->>>>>>> e3bb5a1bdc7dc78c6e486530dc69f28289b9f510
+
 
   position = "Amateur";                                                       // Clients always start as an amateur.
-  hideHeading = false;                                                        // The heading should not be hidden since the name and position are set.
+  hideHeading = "inline";                                                        // The heading should not be hidden since the name and position are set.
 
   updateHeader();                                                             // Update the heading (name/position)
 
@@ -52,7 +42,7 @@ function updateHeader(){
   document.getElementById("gamePlayer").innerHTML = "Name: " + firstName;
   document.getElementById("gamePosition").innerHTML = "Position: " + position;
 
-  if (hideHeading)
+  if (hideHeading == "inline")
   {
     document.getElementById("gamePlayer").style.display = "inline";
     document.getElementById("gamePosition").style.display = "inline";
@@ -91,7 +81,6 @@ function loadCookies() {
   firstName = getCookie("name");
   hideHeading = getCookie("headingVisibility");
   position = getCookie("position");
-  console.log(hideHeading);
 
   // set the name to name from cookies
   if (firstName != "")

@@ -25,6 +25,10 @@ form{
 
 }
 
+#gamePlayer, #gamePosition{
+  display:none;
+}
+
 input, form {
  font-size: 20pt;
 }
