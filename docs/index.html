@@ -13,18 +13,18 @@
   </head>
 
   <body onload="bodyOnLoad()">
-    <div id=topHeading>
+    <header id=topHeading>
       <span id="gameName">Cookie Monster</span>
       <br>
-      <span id="gamePlayer" hidden="true"> Player Name</span>
+      <span id="gamePlayer" hidden="true">Player Name</span>
       <br>
       <span id="gamePosition" hidden="true">Current position</span>
 
-    </div>
+    </header>
 
-    <div id="nameFields">
+    <div id="nameInputFields">
 
-      <form class="rounded" onsubmit="setName()">
+      <form class="rounded" onsubmit="setNameClick()">
         Enter name: <input class="rounded" id="fName" type="text" name ="fname"><br />
         <input class="rounded" name="button" type="submit"/>
       </form>
