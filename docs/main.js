@@ -36,7 +36,7 @@ function setNameClick() {                                                       
   document.getElementById("buttons").style.display = "inline";
 
   // Begin the ticker tape
-  myMove();
+
 
   // Update the cookies
   setCookie("name", firstName, 30);
@@ -79,7 +79,8 @@ function updateHeader(){
     document.getElementById("gamePosition").style.display = "none";
   }
 
-
+  // Start ticker tape
+  myMove();
 }
 /*This is going to have scrolling text to introduce the game like a ticker tape.
 https://www.w3schools.com/js/js_htmldom_animate.asp*/
