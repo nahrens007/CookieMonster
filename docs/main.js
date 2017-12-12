@@ -66,7 +66,8 @@ function myMove(){
   var id = setInterval(frame,10);
   function frame(){
     if(pos == -2450){
-      clearInterval(id);
+      //clearInterval(id);
+      pos = 350;
     }else{
       pos--;
       elem.style.left = pos + "px";
