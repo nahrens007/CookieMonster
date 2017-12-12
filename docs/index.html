@@ -14,11 +14,14 @@
 
   <body onload="bodyOnLoad()">
     <header id=topHeading>
-      <span id="gameName">Somewhere on Planet Earth</span>
-      <br>
-      <span id="gamePlayer"> Player Name</span>
-      <br>
-      <span id="gamePosition">Current position</span>
+      <div id="information">
+        <span id="gameName">Somewhere on Planet Earth</span>
+        <br>
+        <span id="gamePlayer"> Player Name</span>
+        <br>
+        <span id="gamePosition">Current position</span>
+    </div>
+    <!--  <span id="parentsAdoration" dis>Parents Adoration</span>-->
 
     </header>
 
@@ -36,7 +39,7 @@
     </div>
 
     <div id="buttons">
-        <button id="cryButton" class="babyButtons" type="button" name="cryButton">Cry</button>
+        <button id="cryButton" class="babyButtons" type="button" name="cryButton" onclick="cryClick()">Cry</button>
         <button id="giggleButton" class="babyButtons" type="button" name="giggleButton">Giggle</button>
     </div>
 

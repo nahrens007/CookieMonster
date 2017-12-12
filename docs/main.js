@@ -1,6 +1,9 @@
 var firstName,position;
 var hideHeading;
 var storyText;
+var cry = 0;                                   //Baby variables
+var parentsAdoration = 0;
+var selfWill = 0;
 
 /*
 setNameClick(): function is activated when the "submit" button is clicked on the name input form.
@@ -41,6 +44,24 @@ function setNameClick() {                                                       
   setCookie("headingVisibility", hideHeading, 30);
 }
 
+function cryClick(){
+
+
+  if(cry < 10){
+    parentsAdoration--;
+    selfWill++;
+    cry++;
+  }else{
+    if(cry==10)
+      document.getElementById("cryButton").innerHTML = "Wail";
+    cry += 2
+    parentsAdoration -= 5;
+    selfWill+= 5;
+  }
+
+
+
+}
 /*
 Will update the information in the top header when we need it to.
 */
