@@ -23,6 +23,22 @@ body {
   font-size: 150%;
 
 }
+
+#buttons{
+
+  height: 30%;
+  display: none;
+
+}
+.babyButtons{
+
+  margin: 1%;
+  border: outset;
+  height: 35px;;
+  width: 10%;
+
+}
+
 #topHeading{
  color: black;
  background-color: darkgrey ;
