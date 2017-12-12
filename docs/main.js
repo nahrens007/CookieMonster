@@ -1,5 +1,6 @@
 var firstName,position;
-var hideHeading;         
+var hideHeading;
+var storyText;
 
 /*
 setNameClick(): function is activated when the "submit" button is clicked on the name input form.
@@ -11,7 +12,11 @@ This function is responsible for:
 */
 function setNameClick() {                                                          //After someone enters there name, this removes the field and
 
-  firstName = document.getElementById("fName").value;                         // Retrieves name from user
+  firstName = document.getElementById("fName").value;
+                        // Retrieves name from user
+  storyText = "All sounds are muted. The world around is warm and comforting but "+
+    "strangely is not as roomy as you first remebered. Suddenly, a light appears and " +
+    "you are thrust towards the light. You think to yourself, 'Here goes nothing...'";
 
   // if the firstName input field was empty, set it to a generic name.
   if (firstName == "" || firstName == null){
@@ -22,12 +27,14 @@ function setNameClick() {                                                       
 
   document.getElementById("nameInputFields").innerHTML = "";                  //https://www.w3schools.com/jsref/dom_obj_style.asp
 
+  document.getElementById("animate").innerHTML = storyText;
 
   position = "Amateur";                                                       // Clients always start as an amateur.
   hideHeading = "inline";                                                        // The heading should not be hidden since the name and position are set.
 
   updateHeader();                                                             // Update the heading (name/position)
 
+  myMove();
   // Update the cookies
   setCookie("name", firstName, 30);
   setCookie("position", position, 30);
@@ -50,6 +57,25 @@ function updateHeader(){
     document.getElementById("gamePlayer").style.display = "none";
     document.getElementById("gamePosition").style.display = "none";
   }
+
+}
+/*This is going to have scrolling text to introduce the game like a ticker tape.
+https://www.w3schools.com/js/js_htmldom_animate.asp*/
+function myMove(){
+  var elem = document.getElementById("animate");
+  var pos = 350;
+  var id = setInterval(frame,10);
+  function frame(){
+    if(pos == -2450){
+      clearInterval(id);
+    }else{
+      pos--;
+      elem.style.left = pos + "px";
+    }
+
+
+  }
+
 
 }
 

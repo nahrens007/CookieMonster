@@ -6,12 +6,30 @@ body {
  padding: 0;
 }
 
+/*overflow will hide the text when not in the container */
+#container{
+  width: 350px;
+  height: 30px;
+  background-color: black;
+  position: relative;
+  overflow:hidden;
+}
+
+#animate{
+  width: 1000%;
+  height: 30px;
+  color: white;
+  position: absolute;
+  font-size: 150%;
+
+}
 #topHeading{
  color: black;
  background-color: darkgrey ;
  margin: 0px;
  padding: 10px;
  font-size: 140%
+
 }
 
 #gameName{
