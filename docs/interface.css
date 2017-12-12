@@ -17,37 +17,86 @@ body {
 
 #animate{
   width: 100%;
-  height: 30px;
+  height: 100%;
   color: white;
   position: absolute;
-  font-size: 150%;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+
 
 }
 
 #buttons{
-
-  height: 30%;
+  width: 40px;
+  height: 20px;
+  font-size: 30%;
   display: none;
+  hover: black;
+
 
 }
-.babyButtons{
 
+.babyButtons{
   margin: 1%;
   border: outset;
-  height: 35px;;
-  width: 10%;
+  background-color: #C2BEBD;
 
+}
+
+.babyButtons:active{
+  background-color: #A8A4A3;
 }
 
 #topHeading{
  color: black;
  background-color: darkgrey ;
  margin: 0px;
- padding: 10px;
+ padding: 0px;
  font-size: 140%;
-
+ width: 100%;
+ height: 100px;
 
 }
+
+#information{
+  width: 25%;
+  float:left;
+  display: inline;
+  height: 100%;
+
+}
+
+#pAdoration{
+  display: none;
+  margin-top: 20px;
+  float: left;
+  height: 75%;
+  width: 10%;
+  position: relative;
+
+}
+
+#pAdorationBar{
+  position: absolute;
+  bottom: 20px;
+  height: 0px;
+  width: 50%;
+  background-color: black;
+  margin: 0px auto;
+
+}
+
+#pAdorationText{
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0px;
+}
+
+
+
 
 #gameName{
 

@@ -1,7 +1,10 @@
 var firstName,position;
 var hideHeading;
-var storyText;
-var cry = 0;                                   //Baby variables
+var storyText = "All sounds are muted. The world around is warm and comforting but "+
+  "strangely is not as roomy as you first remebered. Suddenly, a light appears and " +
+  "you are thrust towards the light. You think to yourself, 'Here goes nothing...'";
+var cry = 0;
+var giggle = 0;                                   //Baby variables
 var parentsAdoration = 0;
 var selfWill = 0;
 
@@ -23,8 +26,8 @@ function setNameClick() {                                                       
     firstName = "Guest";
   }
 
-  document.getElementById("game").style.display = "block";                    // Set the display div to block so that the user may begin playing
-
+  document.getElementById("game").style.display = "block";
+                     // Set the display div to block so that the user may begin playing
   document.getElementById("nameInputFields").innerHTML = "";                  //https://www.w3schools.com/jsref/dom_obj_style.asp
 
   position = "Baby";                                                       // Clients always start as an amateur.
@@ -35,17 +38,34 @@ function setNameClick() {                                                       
   //Shows the first buttons
   document.getElementById("buttons").style.display = "inline";
 
-  // Begin the ticker tape
-
-
   // Update the cookies
   setCookie("name", firstName, 30);
   setCookie("position", position, 30);
   setCookie("headingVisibility", hideHeading, 30);
 }
 
-function cryClick(){
+/*This will determine what happens when giggle is cliked.
+ Overtime the effects increase.*/
+function giggleClick(){
 
+  if(giggle < 10){
+    parentsAdoration++;
+    selfWill--;
+    giggle++;
+  }else if(giggle==10){
+      document.getElementById("giggleButton").innerHTML = "Laugh";
+      giggle++;
+    }else{
+    giggle += 2
+    parentsAdoration += 5;
+    selfWill-= 5;
+    }
+
+  document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
+
+}
+
+function cryClick(){
 
   if(cry < 10){
     parentsAdoration--;
@@ -58,8 +78,6 @@ function cryClick(){
     parentsAdoration -= 5;
     selfWill+= 5;
   }
-
-
 
 }
 /*
@@ -74,38 +92,40 @@ function updateHeader(){
   {
     document.getElementById("gamePlayer").style.display = "inline";
     document.getElementById("gamePosition").style.display = "inline";
+    document.getElementById("pAdoration").style.display = "inline";
   } else {
     document.getElementById("gamePlayer").style.display = "none";
     document.getElementById("gamePosition").style.display = "none";
   }
 
   // Start ticker tape
-  myMove();
+  myMove(storyText, 2450);
 }
 /*This is going to have scrolling text to introduce the game like a ticker tape.
 https://www.w3schools.com/js/js_htmldom_animate.asp*/
-function myMove(){
+function myMove(text, containterSize){
   var elem = document.getElementById("animate");
   var id = setInterval(frame,15);
   var box = document.querySelector("#container");  //https://www.w3schools.com/jsref/prop_element_offsetwidth.asp
-  var width = box.offsetWidth + 100;
+  var width = box.offsetWidth + 300;
   var pos = width;
+
+  elem.style.width = containterSize + "px";
 
   //Starts tape offscreen so you don't see a flash of text on start
   elem.style.left = pos + "px";
-  document.getElementById("animate").innerHTML = storyText;
+  elem.innerHTML = text;
 
   function frame(){
-    if(pos == -2450){
+    if(pos <= -containterSize){
       //clearInterval(id);
-      pos = width;
+      pos = box.offsetWidth + 100;
     }else{
       pos--;
       elem.style.left = pos + "px";
     }
 
   }
-
 
 }
 
@@ -150,8 +170,13 @@ function loadCookies() {
 
 /* runs on HTML body onLoad event */
 function bodyOnLoad() {
-  storyText = "All sounds are muted. The world around is warm and comforting but "+
-    "strangely is not as roomy as you first remebered. Suddenly, a light appears and " +
-    "you are thrust towards the light. You think to yourself, 'Here goes nothing...'";
+
   loadCookies();
 }
+
+/*
+window.setInterval(function(){
+  document.getElementById("pAdorationBar").style.height = parentsAdoration += "px";
+}, 1000);
+
+*/
