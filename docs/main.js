@@ -24,12 +24,16 @@ function setNameClick() {                                                       
 
   document.getElementById("nameInputFields").innerHTML = "";                  //https://www.w3schools.com/jsref/dom_obj_style.asp
 
-
-
-  position = "Amateur";                                                       // Clients always start as an amateur.
+  position = "Baby";                                                       // Clients always start as an amateur.
   hideHeading = "inline";                                                        // The heading should not be hidden since the name and position are set.
 
   updateHeader();                                                             // Update the heading (name/position)
+
+  //Shows the first buttons
+  document.getElementById("buttons").style.display = "inline";
+
+  // Begin the ticker tape
+  myMove();
 
   // Update the cookies
   setCookie("name", firstName, 30);
@@ -54,25 +58,29 @@ function updateHeader(){
     document.getElementById("gamePosition").style.display = "none";
   }
 
-  // Begin the ticker tape
-  document.getElementById("animate").innerHTML = storyText;
-  myMove();
+
 }
 /*This is going to have scrolling text to introduce the game like a ticker tape.
 https://www.w3schools.com/js/js_htmldom_animate.asp*/
 function myMove(){
   var elem = document.getElementById("animate");
-  var pos = 350;
-  var id = setInterval(frame,10);
+  var id = setInterval(frame,15);
+  var box = document.querySelector("#container");  //https://www.w3schools.com/jsref/prop_element_offsetwidth.asp
+  var width = box.offsetWidth + 100;
+  var pos = width;
+
+  //Starts tape offscreen so you don't see a flash of text on start
+  elem.style.left = pos + "px";
+  document.getElementById("animate").innerHTML = storyText;
+
   function frame(){
     if(pos == -2450){
       //clearInterval(id);
-      pos = 350;
+      pos = width;
     }else{
       pos--;
       elem.style.left = pos + "px";
     }
-
 
   }
 
@@ -125,27 +133,3 @@ function bodyOnLoad() {
     "you are thrust towards the light. You think to yourself, 'Here goes nothing...'";
   loadCookies();
 }
-
-/*
-function cookieClick(number) {
-  cookies = cookies + number;
-  document.getElementById("cookies").innerHTML = cookies;
-}
-function buyCursor() {
-  cursorCost = Math.floor(10*Math.pow(1.1,cursors))     //Works Out cost for current cursor
-  if(cookies >= cursorCost){                                //Checks that playerr can buy cursor
-    cursors = cursors + 1;
-    cookies = cookies - cursorCost;
-    document.getElementById("cursors").innerHTML = cursors;
-    document.getElementById("cookies").innerHTML = cookies;
-  }
-  var nextCost = Math.floor(10*Math.pow(1.1,cursors));            //Updates the user of cursor cost
-  document.getElementById("cursorCost").innerHTML = nextCost;
-};
-window.setInterval(function(){
-	cookieClick(cursors);
-  if(cookies < cursorCost){
-  }
-    //  document.getElementById("buyCursor").disabled = false;
-}, 1000);
-*/
