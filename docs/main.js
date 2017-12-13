@@ -61,7 +61,6 @@ function giggleClick(){
     selfWill-= 5;
     }
 
-  document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
 
 }
 
@@ -174,9 +173,7 @@ function bodyOnLoad() {
   loadCookies();
 }
 
-/*
-window.setInterval(function(){
-  document.getElementById("pAdorationBar").style.height = parentsAdoration += "px";
-}, 1000);
 
-*/
+window.setInterval(function(){
+  document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
+}, 1);
