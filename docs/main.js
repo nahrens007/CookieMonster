@@ -30,7 +30,7 @@ function setNameClick() {                                                       
                      // Set the display div to block so that the user may begin playing
   document.getElementById("nameInputFields").innerHTML = "";                  //https://www.w3schools.com/jsref/dom_obj_style.asp
 
-  position = "Baby";                                                       // Clients always start as an amateur.
+  position = "Baby";                                                       // Clients always start as an baby.
   hideHeading = "inline";                                                        // The heading should not be hidden since the name and position are set.
 
   updateHeader();                                                             // Update the heading (name/position)
@@ -176,4 +176,5 @@ function bodyOnLoad() {
 
 window.setInterval(function(){
   document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
+  document.getElementById("selfWillBar").style.height = selfWill + "px";
 }, 1);
