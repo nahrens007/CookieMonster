@@ -103,9 +103,9 @@ function updateHeader(){
 /*This is going to have scrolling text to introduce the game like a ticker tape.
 https://www.w3schools.com/js/js_htmldom_animate.asp*/
 function myMove(text, containterSize){
-  var elem = document.getElementById("animate");
+  var elem = document.getElementById("tapeAnimate");
   var id = setInterval(frame,15);
-  var box = document.querySelector("#container");  //https://www.w3schools.com/jsref/prop_element_offsetwidth.asp
+  var box = document.querySelector("#tapeContainer");  //https://www.w3schools.com/jsref/prop_element_offsetwidth.asp
   var width = box.offsetWidth + 300;
   var pos = width;
 
