@@ -14,6 +14,7 @@ body {
   background-color: black;
   position: relative;
   overflow:hidden;
+  display: none; /* shouldn't display until cookies/name has been set. */
 }
 
 #tapeAnimate{
@@ -55,7 +56,7 @@ body {
  color: black;
  background-color: darkgrey ;
  margin: 0px;
- padding: 10px;
+ padding: 0px;
  font-size: 25px;
 
  /* width should be complete width of screen, height should be constant px */
@@ -70,14 +71,11 @@ body {
   float:left;
   display: inline;
 
-  /* Game player information div should be full height of it's parent (topHeading) */
-  height: 100%;
-
+  padding: 5px 0px 0px 10px;
 }
 
-/* directly under header */
+/* directly under game div */
 #pAdoration{
-  display: none;
   float: left;
   height: 100%;
   width: 115px;
@@ -89,7 +87,6 @@ body {
   height: 0px;
   width: 57px;
   background-color: black;
-  bottom: 20px;
   position: absolute;
 }
 
@@ -97,7 +94,6 @@ body {
 #pAdorationText{
   font-size: 14px;
   font-weight: bold;
-  bottom: 0px;
   position: absolute;
 }
 

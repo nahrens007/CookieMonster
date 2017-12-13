@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Cookie  Monster</title>
+    <title>Planet Earth</title>
 
     <!-- load css pages -->
     <link rel="stylesheet" type="text/css" href="interface.css" />
@@ -17,21 +17,10 @@
       <div id="gamePlayerInformation">
         <span id="gameName">Somewhere on Planet Earth</span>
         <br>
-        <span id="gamePlayer"> Player Name</span>
+        <span id="gamePlayer">Player Name</span>
         <br>
         <span id="gamePosition">Current position</span>
       </div>
-
-      <div id="pAdoration">
-          <div id="pAdorationBar">
-
-          </div>
-          <span id="pAdorationText">
-              Parent Adoration
-          </span>
-      </div>
-
-      <div class="clearfix"></div>
     </header>
 
     <div id="nameInputFields">
@@ -48,12 +37,23 @@
     </div>
 
     <div id="game">
+      <div id="inGameStats">
+        <div id="pAdoration">
+            <div id="pAdorationBar">
+
+            </div>
+            <span id="pAdorationText">
+                Parent Adoration
+            </span>
+        </div>
+      </div>
+
       <div id="babyStage">
         <div id="buttons">
             <button id="cryButton" class="babyButtons" type="button" name="cryButton" onclick="cryClick()">Cry</button>
             <button id="giggleButton" class="babyButtons" type="button" name="giggleButton" onclick="giggleClick()">Giggle</button>
-          </div>
         </div>
+      </div>
     </div>
 
     <!--
