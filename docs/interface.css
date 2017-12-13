@@ -138,6 +138,37 @@ body {
 
 }
 
+
+#babyWords{
+  float:left;
+  left: 20px;
+  height: 100%;
+  width: 115px;
+  position: relative;
+
+}
+
+/* directly under selfwill */
+#babyWordsBar{
+  height: 0px;
+  width: 57px;
+  background-color: black;
+  bottom: 20px;
+  position: absolute;
+  margin-left: 28px;
+
+}
+
+/* directly under selfwill*/
+#babyWordsText{
+  margin-left: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  bottom: 0px;
+  position: absolute;
+
+}
+
 #gameData{
   position: relative;
   border-style: solid;
