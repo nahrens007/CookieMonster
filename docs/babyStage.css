@@ -1,0 +1,32 @@
+/*
+babyStage.css contains everything related to the baby babyStage
+*/
+
+/* directly under game div */
+#babyStage{
+  position: relative;
+  border-style: solid;
+  width: 400px;
+  height: 300px;
+  margin: 5px;
+  float: left;
+}
+
+/* under babyStage */
+#buttons{
+  width: 40px;
+  height: 20px;
+  font-size: 30px;
+  display: none;
+}
+
+/* under #buttons */
+.babyButtons{
+  margin: 1px;
+  border: outset;
+  background-color: #C2BEBD;
+
+}
+.babyButtons:active{
+  background-color: #A8A4A3;
+}
