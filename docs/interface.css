@@ -139,7 +139,7 @@ body {
 }
 
 /*Directly from the mouth */
-#babyWords{
+#intelligence{
   float:left;
   left: 20px;
   height: 100%;
@@ -149,7 +149,7 @@ body {
 }
 
 /* directly under selfwill */
-#babyWordsBar{
+#intelligenceBar{
   height: 0px;
   width: 57px;
   background-color: black;
@@ -160,7 +160,7 @@ body {
 }
 
 /* directly under selfwill*/
-#babyWordsText{
+#intelligenceText{
   margin-left: 28px;
   font-size: 14px;
   font-weight: bold;
