@@ -79,6 +79,8 @@ body {
   border-style: solid;
   width: 400px;
   height: 300px;
+  margin: 5px;
+  float: left;
 }
 /* directly under game */
 #pAdoration{
@@ -172,23 +174,10 @@ body {
 #gameData{
   position: relative;
   border-style: solid;
-  bottom: 304.5px;
-  left: 404.5px;
   width: 700px;
   height: 300px;
-
-
-}
-
-#gameData{
-  position: relative;
-  border-style: solid;
-  bottom: 304.5px;
-  left: 404.5px;
-  width: 700px;
-  height: 300px;
-
-
+  padding: 5px;
+  float: left;
 }
 
 .clearfix {
