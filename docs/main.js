@@ -14,13 +14,8 @@ function: gameLoop():
  */
 function gameLoop() {
 
-  window.setInterval(function () {
-
-    document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
-    document.getElementById("selfWillBar").style.height = selfWill + "px";
-
-
-  }, 1);
+  document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
+  document.getElementById("selfWillBar").style.height = selfWill + "px";
 
 }
 
@@ -45,7 +40,9 @@ function initiateGame(){
 
   // Start ticker tape
   animateTape(storyText, 2400);
-  gameLoop();
+
+  /* game stats are updated once every 100ms  */
+  setInterval(function() { gameLoop(); }, 100);
 }
 
 /*This will determine what happens when giggle is cliked.
