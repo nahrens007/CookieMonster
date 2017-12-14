@@ -1,9 +1,13 @@
-
 body {
- background-color: lightgray;
- font-family: Arial;
- margin:0;
- padding: 0;
+  background-color: lightgray;
+  font-family: Arial;
+  margin:0;
+  padding: 0;
+
+  /* min width to 700px */
+  min-width:700px;
+  width: auto !important;
+  width:700px;
 }
 
 /*overflow will hide the text when not in the container */
