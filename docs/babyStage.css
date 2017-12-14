@@ -9,20 +9,17 @@ babyStage.css contains everything related to the baby babyStage
   width: 400px;
   height: 300px;
   margin: 5px;
+  padding: 5px;
   float: left;
 }
 
 /* under babyStage */
 #buttons{
-  width: 40px;
-  height: 20px;
-  font-size: 30px;
   display: none;
 }
 
 /* under #buttons */
 .babyButtons{
-  margin: 1px;
   border: outset;
   background-color: #C2BEBD;
 

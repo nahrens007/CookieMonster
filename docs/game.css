@@ -16,6 +16,7 @@ game.css holds all the css for elements related to the game <div>
   width: 700px;
   height: 300px;
   margin: 5px;
+  padding: 5px;
   float: left;
 }
 
