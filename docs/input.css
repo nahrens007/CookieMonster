@@ -6,6 +6,12 @@ input, form {
  font-size: 20pt;
 }
 
+form{
+ border-style: outset;
+ padding: 20px;
+
+}
+
 #nameInputFields {
   display: none;
 }

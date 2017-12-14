@@ -62,11 +62,7 @@ body {
   font-weight: bold;
 }
 
-form{
- border-style: outset;
- padding: 20px;
 
-}
 
 #gamePlayer, #gamePosition{
   display:none;
