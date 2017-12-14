@@ -6,7 +6,6 @@ babyStage.css contains everything related to the baby babyStage
 #babyStage{
   position: relative;
   border-style: solid;
-  width: 400px;
   height: 300px;
   margin: 5px;
   padding: 5px;
