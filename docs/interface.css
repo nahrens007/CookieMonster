@@ -138,7 +138,7 @@ body {
 
 }
 
-
+/*Directly from the mouth */
 #babyWords{
   float:left;
   left: 20px;
@@ -183,9 +183,6 @@ body {
 .clearfix {
   clear: both;
 }
-
-
-
 
 #gameName{
 
