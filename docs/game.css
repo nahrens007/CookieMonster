@@ -1,0 +1,138 @@
+/*
+game.css holds all the css for elements related to the game <div>
+*/
+
+#game{
+  display: none;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+}
+
+/* directly under game div */
+#babyStage{
+  position: relative;
+  border-style: solid;
+  width: 400px;
+  height: 300px;
+  margin: 5px;
+  float: left;
+}
+
+/* under babyStage */
+#buttons{
+  width: 40px;
+  height: 20px;
+  font-size: 30px;
+  display: none;
+}
+
+/* under #buttons */
+.babyButtons{
+  margin: 1px;
+  border: outset;
+  background-color: #C2BEBD;
+
+}
+.babyButtons:active{
+  background-color: #A8A4A3;
+}
+
+/* under #game */
+#gameData{
+  position: relative;
+  border-style: solid;
+  width: 700px;
+  height: 300px;
+  margin: 5px;
+  float: left;
+}
+
+/* directly under game */
+#pAdoration{
+  display: inline;
+  float: left;
+  height: 100%;
+  width: 115px;
+  position: relative;
+
+}
+ /* directly under pAdoration */
+#pAdorationBar{
+  height: 0px;
+  width: 57px;
+  background-color: black;
+  bottom: 20px;
+  position: absolute;
+  margin-left: 28px;
+}
+
+ /* directly under pAdoration */
+#pAdorationText{
+  font-size: 14px;
+  font-weight: bold;
+  bottom: 0px;
+  position: absolute;
+}
+
+/* directly under game */
+#selfWill{
+  float:left;
+  left: 20px;
+  height: 100%;
+  width: 115px;
+  position: relative;
+
+}
+
+/* directly under selfwill */
+#selfWillBar{
+  height: 0px;
+  width: 57px;
+  background-color: black;
+  bottom: 20px;
+  position: absolute;
+  margin-left: 28px;
+
+}
+
+/* directly under selfwill*/
+#selfWillText{
+  margin-left: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  bottom: 0px;
+  position: absolute;
+
+}
+
+/*Directly under #game*/
+#intelligence{
+  float:left;
+  left: 20px;
+  height: 100%;
+  width: 115px;
+  position: relative;
+
+}
+
+/* directly under #intelligence */
+#intelligenceBar{
+  height: 0px;
+  width: 57px;
+  background-color: black;
+  bottom: 20px;
+  position: absolute;
+  margin-left: 28px;
+
+}
+
+/* directly under #intelligence */
+#intelligenceText{
+  margin-left: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  bottom: 0px;
+  position: absolute;
+
+}
