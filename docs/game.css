@@ -13,7 +13,6 @@ game.css holds all the css for elements related to the game <div>
 #gameData{
   position: relative;
   border-style: solid;
-  width: 700px;
   height: 300px;
   margin: 5px;
   padding: 5px;
@@ -50,7 +49,6 @@ game.css holds all the css for elements related to the game <div>
 /* directly under game */
 #selfWill{
   float:left;
-  left: 20px;
   height: 100%;
   width: 115px;
   position: relative;
@@ -81,7 +79,6 @@ game.css holds all the css for elements related to the game <div>
 /*Directly under #game*/
 #intelligence{
   float:left;
-  left: 20px;
   height: 100%;
   width: 115px;
   position: relative;
