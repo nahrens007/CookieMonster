@@ -82,6 +82,7 @@ body {
 }
 /* directly under game */
 #pAdoration{
+  display: inline;
   float: left;
   height: 100%;
   width: 115px;
@@ -93,6 +94,7 @@ body {
   height: 0px;
   width: 57px;
   background-color: black;
+  bottom: 20px;
   position: absolute;
   margin-left: 28px;
 }
@@ -101,6 +103,7 @@ body {
 #pAdorationText{
   font-size: 14px;
   font-weight: bold;
+  bottom: 0px;
   position: absolute;
 }
 
@@ -163,6 +166,17 @@ body {
   font-weight: bold;
   bottom: 0px;
   position: absolute;
+
+}
+
+#gameData{
+  position: relative;
+  border-style: solid;
+  bottom: 304.5px;
+  left: 404.5px;
+  width: 700px;
+  height: 300px;
+
 
 }
 

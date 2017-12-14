@@ -14,6 +14,14 @@ function: gameLoop():
  */
 function gameLoop() {
 
+  window.setInterval(function () {
+
+    document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
+    document.getElementById("selfWillBar").style.height = selfWill + "px";
+
+
+  }, 1);
+
 }
 
 /*
@@ -37,6 +45,7 @@ function initiateGame(){
 
   // Start ticker tape
   animateTape(storyText, 2400);
+  gameLoop();
 }
 
 /*This will determine what happens when giggle is cliked.
@@ -65,13 +74,14 @@ function cryClick(){
     parentsAdoration--;
     selfWill++;
     cry++;
-  }else{
-    if(cry==10)
+  }else if(cry==10){
       document.getElementById("cryButton").innerHTML = "Wail";
+      cry++;
+    }else{
     cry += 2
     parentsAdoration -= 5;
     selfWill+= 5;
-  }
+    }
 
 }
 
@@ -122,7 +132,7 @@ This function is responsible for:
 function setNameClick() {
 
   firstName = document.getElementById("fName").value;
-  position = "Baby"; 
+  position = "Baby";
 
   // if the firstName input field was empty, set it to a generic name.
   if (firstName == "" || firstName == null){
@@ -183,4 +193,3 @@ function getCookie(cname) {
   }
   return "";
 }
-
