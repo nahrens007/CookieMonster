@@ -3,8 +3,8 @@ var position;
 var storyText = "All sounds are muted. The world around is warm and comforting but "+
   "strangely is not as roomy as you first remebered. Suddenly, a light appears and " +
   "you are thrust towards the light. You think to yourself, 'Here goes nothing...'";
-var cry = 0, giggle = 0, babyWords = 0, soiledDiapers = 0, pottyTraining = 0, parentStress;                                   //Baby variables
-var parentsAdoration = 0, selfWill = 0;
+var cry = 0, giggle = 0, babyWords = 0, soiledDiapers = 0, pottyTraining = 0, parentStress = 0;                                   //Baby variables
+var parentsAdoration = 0, selfWill = 0, intelligence = 0;
 
 
 /*
@@ -15,7 +15,9 @@ function gameLoop() {
 
   document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
   document.getElementById("selfWillBar").style.height = selfWill + "px";
-
+  document.getElementById("intelligenceBar").style.height = intelligence + "px";
+  document.getElementById("pottyTrainBar").style.height = pottyTrain + "px";
+  document.getElementById("parentStressBar").style.height = parentStress + "px";
 
 }
 
@@ -53,6 +55,7 @@ function giggleClick(){
     parentsAdoration++;
     selfWill--;
     giggle++;
+    parentStress--;
   }else if(giggle==10){
       document.getElementById("giggleButton").innerHTML = "Laugh";
       giggle++;
@@ -60,6 +63,7 @@ function giggleClick(){
     giggle += 2
     parentsAdoration += 5;
     selfWill-= 5;
+    parentStress -=5;
     }
 
 
@@ -71,6 +75,7 @@ function cryClick(){
     parentsAdoration--;
     selfWill++;
     cry++;
+    parentStress++;
   }else if(cry==10){
       document.getElementById("cryButton").innerHTML = "Wail";
       cry++;
@@ -78,21 +83,33 @@ function cryClick(){
     cry += 2
     parentsAdoration -= 5;
     selfWill+= 5;
+    parentStress +=5;
     }
 
 }
 
 function babyWordsClick() {
 
+  intelligence++;
 
 }
 
 function pottyTrainClick() {
 
 
+}
+
+function parentStatus(){
 
 
 }
+
+function healthStatus() {
+
+}
+
+
+
 
 /* function: bodyOnLoad():
 Runs when the HTML body loads (onload attribute)
