@@ -3,7 +3,7 @@ var position;
 var storyText = "All sounds are muted. The world around is warm and comforting but "+
   "strangely is not as roomy as you first remebered. Suddenly, a light appears and " +
   "you are thrust towards the light. You think to yourself, 'Here goes nothing...'";
-var cry = 0, giggle = 0, babyWords = 0, soiledDiapers = 0, pottyTraining = 0, parentStress = 0;                                   //Baby variables
+var cry = 0, giggle = 0, giggleModifier = 1, babyWords = 0, soiledDiapers = 0, pottyTraining = 0, parentStress = 0;                                  //Baby variables
 var parentsAdoration = 0, selfWill = 0, intelligence = 0;
 
 
@@ -51,9 +51,13 @@ function initiateGame(){
  Overtime the effects increase.*/
 function giggleClick(){
 
+  if(giggle < cry){
+    giggleModifier = 2;
+  }
+
   if(giggle < 10){
-    parentsAdoration++;
-    selfWill--;
+    parentsAdoration += (1*giggleModifier);
+    selfWill --;
     giggle++;
     parentStress--;
   }else if(giggle==10){
@@ -61,7 +65,7 @@ function giggleClick(){
       giggle++;
     }else{
     giggle += 2
-    parentsAdoration += 5;
+    parentsAdoration += (5*giggleModifier);
     selfWill-= 5;
     parentStress -=5;
     }
