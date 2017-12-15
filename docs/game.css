@@ -14,7 +14,7 @@ game.css holds all the css for elements related to the game <div>
   position: relative;
   border-style: solid;
   height: 300px;
-  width: 380px;
+  width:620px;
   margin: 5px;
   padding: 5px;
   float: left;
@@ -99,6 +99,66 @@ game.css holds all the css for elements related to the game <div>
 
 /* directly under #intelligence */
 #intelligenceText{
+  margin-left: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  bottom: 0px;
+  position: absolute;
+
+}
+
+/*Directly under #game*/
+#pottyTrain{
+  float:left;
+  height: 100%;
+  width: 115px;
+  position: relative;
+
+}
+
+/* directly under #pottyTrain */
+#pottyTrainBar{
+  height: 0px;
+  width: 57px;
+  background-color: black;
+  bottom: 20px;
+  position: absolute;
+  margin-left: 28px;
+
+}
+
+/* directly under #pottyTrain */
+#pottyTrainText{
+  margin-left: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  bottom: 0px;
+  position: absolute;
+
+}
+
+/*Directly under #game*/
+#parentStress{
+  float:left;
+  height: 100%;
+  width: 135px;
+  position: relative;
+
+}
+
+/* directly under #parenStress */
+#parentStressBar{
+  height: 0px;
+  width: 57px;
+  background-color: black;
+  bottom: 20px;
+  position: absolute;
+  margin-left: 28px;
+
+}
+
+/* directly under #parenStress */
+#parentStressText{
   margin-left: 28px;
   font-size: 14px;
   font-weight: bold;

@@ -3,10 +3,9 @@ var position;
 var storyText = "All sounds are muted. The world around is warm and comforting but "+
   "strangely is not as roomy as you first remebered. Suddenly, a light appears and " +
   "you are thrust towards the light. You think to yourself, 'Here goes nothing...'";
-var cry = 0;
-var giggle = 0;                                   //Baby variables
-var parentsAdoration = 0;
-var selfWill = 0;
+var cry = 0, giggle = 0, babyWords = 0, soiledDiapers = 0, pottyTraining = 0, parentStress;                                   //Baby variables
+var parentsAdoration = 0, selfWill = 0;
+
 
 /*
 function: gameLoop():
@@ -16,6 +15,7 @@ function gameLoop() {
 
   document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
   document.getElementById("selfWillBar").style.height = selfWill + "px";
+
 
 }
 
@@ -82,6 +82,18 @@ function cryClick(){
 
 }
 
+function babyWordsClick() {
+
+
+}
+
+function pottyTrainClick() {
+
+
+
+
+}
+
 /* function: bodyOnLoad():
 Runs when the HTML body loads (onload attribute)
 */
@@ -112,7 +124,7 @@ function animateTape(text, containterSize){
       //clearInterval(id);
       pos = box.offsetWidth + 50;
     }else{
-      pos-=5;
+      pos-=2;
       animatedElement.style.left = pos + "px";
     }
   }
