@@ -4,9 +4,8 @@ game.css holds all the css for elements related to the game <div>
 
 #game{
   display: none;
-  width: 100%;
-  height: 600px;
-  position: absolute;
+  position: relative;
+  float:left;
 }
 
 /* under #game */
@@ -14,7 +13,6 @@ game.css holds all the css for elements related to the game <div>
   position: relative;
   border-style: solid;
   height: 300px;
-  width:620px;
   margin: 5px;
   padding: 5px;
   float: left;
