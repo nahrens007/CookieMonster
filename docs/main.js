@@ -47,9 +47,24 @@ function initiateGame(){
   setInterval(function() { gameLoop(); }, 100);
 }
 
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
 /*This will determine what happens when giggle is cliked.
  Overtime the effects increase.*/
 function giggleClick(){
+
 
   if(giggle < cry){
     giggleModifier = 2;
@@ -70,10 +85,14 @@ function giggleClick(){
     parentStress -=5;
     }
 
-
 }
 
 function cryClick(){
+
+  var crySound;
+  crySound = new sound("babyCry.mp3");
+  crySound.stop();
+
 
   if(cry < 10){
     parentsAdoration--;
@@ -89,6 +108,9 @@ function cryClick(){
     selfWill+= 5;
     parentStress +=5;
     }
+
+    crySound.play();
+
 
 }
 
