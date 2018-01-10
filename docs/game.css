@@ -27,15 +27,6 @@ game.css holds all the css for elements related to the game <div>
   position: relative;
 
 }
- /* directly under pAdoration */
-#pAdorationBar{
-  height: 0px;
-  width: 57px;
-  background-color: black;
-  bottom: 20px;
-  position: absolute;
-  margin-left: 28px;
-}
 
  /* directly under pAdoration */
 #pAdorationText{
@@ -51,17 +42,6 @@ game.css holds all the css for elements related to the game <div>
   height: 100%;
   width: 115px;
   position: relative;
-
-}
-
-/* directly under selfwill */
-#selfWillBar{
-  height: 0px;
-  width: 57px;
-  background-color: black;
-  bottom: 20px;
-  position: absolute;
-  margin-left: 28px;
 
 }
 
@@ -85,17 +65,6 @@ game.css holds all the css for elements related to the game <div>
 }
 
 /* directly under #intelligence */
-#intelligenceBar{
-  height: 0px;
-  width: 57px;
-  background-color: black;
-  bottom: 20px;
-  position: absolute;
-  margin-left: 38px;
-
-}
-
-/* directly under #intelligence */
 #intelligenceText{
   margin-left: 28px;
   font-size: 14px;
@@ -115,17 +84,6 @@ game.css holds all the css for elements related to the game <div>
 }
 
 /* directly under #pottyTrain */
-#pottyTrainBar{
-  height: 0px;
-  width: 57px;
-  background-color: black;
-  bottom: 20px;
-  position: absolute;
-  margin-left: 28px;
-
-}
-
-/* directly under #pottyTrain */
 #pottyTrainText{
   margin-left: 28px;
   font-size: 14px;
@@ -141,17 +99,6 @@ game.css holds all the css for elements related to the game <div>
   height: 100%;
   width: 135px;
   position: relative;
-
-}
-
-/* directly under #parenStress */
-#parentStressBar{
-  height: 0px;
-  width: 57px;
-  background-color: black;
-  bottom: 20px;
-  position: absolute;
-  margin-left: 28px;
 
 }
 

@@ -13,11 +13,6 @@ function: gameLoop():
  */
 function gameLoop() {
 
-  document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
-  document.getElementById("selfWillBar").style.height = selfWill + "px";
-  document.getElementById("intelligenceBar").style.height = intelligence + "px";
-  document.getElementById("pottyTrainBar").style.height = pottyTraining + "px";
-  document.getElementById("parentStressBar").style.height = parentStress + "px";
 
 }
 
