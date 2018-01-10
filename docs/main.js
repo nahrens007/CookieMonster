@@ -19,6 +19,8 @@ function gameLoop() {
   document.getElementById("pottyTrainBar").style.height = pottyTraining + "px";
   document.getElementById("parentStressBar").style.height = parentStress + "px";
 
+  
+
 }
 
 /*
@@ -31,10 +33,6 @@ which have been set by either setNameClick() or loadCookies()).
 */
 function initiateGame(){
   //Shows the first buttons and set starting stats
-
-  var giggleSound;
-  giggleSound = new sound("getSmallItem.mp3");
-  giggleSound.play();
 
   document.getElementById("buttons").style.display = "inline";
 
@@ -70,8 +68,6 @@ function sound(src) {
  Overtime the effects increase.*/
 function giggleClick(){
 
-
-
   if(giggle < cry){
     giggleModifier = 2;
   }
@@ -93,13 +89,11 @@ function giggleClick(){
 
 
 }
+/*
 
+
+*/
 function cryClick(){
-
-  var crySound;
-  crySound = new sound("babyCry.mp3");
-  crySound.stop();
-
 
   if(cry < 10){
     parentsAdoration--;
@@ -115,8 +109,6 @@ function cryClick(){
     selfWill+= 5;
     parentStress +=5;
     }
-
-    crySound.play();
 
 
 }
@@ -189,6 +181,11 @@ This function is responsible for:
 4) Setting the visibility of the header (cookie and html/css).
 */
 function setNameClick() {
+
+  var giggleSound;
+  giggleSound = new sound("getSmallItem.mp3");
+  giggleSound.play();
+
 
   firstName = document.getElementById("fName").value;
   position = "Baby";
