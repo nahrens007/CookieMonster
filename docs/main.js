@@ -31,6 +31,11 @@ which have been set by either setNameClick() or loadCookies()).
 */
 function initiateGame(){
   //Shows the first buttons and set starting stats
+
+  var giggleSound;
+  giggleSound = new sound("getSmallItem.mp3");
+  giggleSound.play();
+
   document.getElementById("buttons").style.display = "inline";
 
   document.getElementById("gamePlayer").innerHTML = "Name: " + firstName;
@@ -66,6 +71,7 @@ function sound(src) {
 function giggleClick(){
 
 
+
   if(giggle < cry){
     giggleModifier = 2;
   }
@@ -84,6 +90,7 @@ function giggleClick(){
     selfWill-= 5;
     parentStress -=5;
     }
+
 
 }
 
