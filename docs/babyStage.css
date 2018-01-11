@@ -7,7 +7,7 @@ babyStage.css contains everything related to the baby babyStage
   position: relative;
   border-style: solid;
   height: 300px;
-  width: 320px;
+  width: 373px;
   margin: 5px;
   padding: 5px;
   float: left;
@@ -17,7 +17,7 @@ babyStage.css contains everything related to the baby babyStage
   position: absolute;
   border-style: solid;
   top: 10px;
-  left: 10px;
+  left: 9px;
   width: 51px;
   height:200px;
 
@@ -33,9 +33,29 @@ babyStage.css contains everything related to the baby babyStage
 
 }
 
+#babyWordsContainer{
+  position: absolute;
+  border-style: solid;
+  top: 10px;
+  left: 138px;
+  width: 118px;
+  height:200px;
+
+}
+
+#pottyTrainContainer{
+  position: absolute;
+  border-style: solid;
+  top: 10px;
+  left: 259px;
+  width: 107px;
+  height:200px;
+
+}
+
+
 
 #containerLabel{
-
   margin: 0px auto;
   font-weight: bold;
   position: relative;
@@ -47,6 +67,40 @@ babyStage.css contains everything related to the baby babyStage
   height: 18px;
 
 }
+
+.containerLevel{
+  font-weight: bold;
+  position: relative;
+  border-style: groove;
+  border-width: 12px;
+  border-top-width: 10px;
+  top: 165px;
+  height: 18px;
+
+}
+
+#cryLevel{
+  width: 25px;
+  left:-3px;
+}
+
+#laughLevel{
+  width: 39px;
+  border-right-width: 21px;
+  border-left-width: 21px;
+}
+
+#babyWordsLevel{
+  width: 25px;
+  border-left-width: 44px;
+  border-right-width: 44px;
+}
+
+#pottyTrainLevel{
+  width: 25px;
+  border-left-width: 39px;
+  border-right-width: 39px;
+}
 /*Centers Slider*/
 #crySlideContainer{
   right: 47px;
@@ -56,6 +110,18 @@ babyStage.css contains everything related to the baby babyStage
 #laughSlideContainer{
   right: 34px;
 }
+
+
+/*Centers Slider*/
+#babyWordsSlideContainer{
+  right:13px;
+}
+
+/*Centers Slider*/
+#pottyTrainSlideContainer{
+  right:15px;
+}
+
 
 /*rotates range slider container so it is vertical */
 .slidecontainer {

@@ -19,6 +19,8 @@ function gameLoop() {
   document.getElementById("pottyTrainBar").style.height = pottyTraining + "px";
   document.getElementById("parentStressBar").style.height = parentStress + "px";
 
+  cry();
+
 
 
 }
@@ -74,6 +76,7 @@ function laugh(){
     parentStress should decrement
     parentsAdoration should increment
   */
+
 }
 
 /*
@@ -87,6 +90,13 @@ function cry(){
     cry should increment
     parentStress should increment
   */
+
+  var slider = document.getElementById("cryRange");
+  var output = document.getElementById("cryLevel");
+  output.innerHTML = slider.value;
+
+  output.innerHTML = this.value;
+  
 }
 
 function babyWordsClick() {
