@@ -3,7 +3,7 @@ var position;
 var storyText = "All sounds are muted. The world around is warm and comforting but "+
   "strangely is not as roomy as you first remebered. Suddenly, a light appears and " +
   "you are thrust towards the light. You think to yourself, 'Here goes nothing...'";
-var cry = 0, giggle = 0, giggleModifier = 1, babyWords = 0, soiledDiapers = 0, pottyTraining = 0, parentStress = 0;                                  //Baby variables
+var cry = 0, laugh = 0, babyWords = 0, soiledDiapers = 0, pottyTraining = 0, parentStress = 0;                                  //Baby variables
 var parentsAdoration = 0, selfWill = 0, intelligence = 0;
 
 
@@ -59,53 +59,29 @@ function sound(src) {
         this.sound.pause();
     }
 }
-/*This will determine what happens when giggle is cliked.
- Overtime the effects increase.*/
-function giggleClick(){
-
-  if(giggle < cry){
-    giggleModifier = 2;
-  }
-
-  if(giggle < 10){
-    parentsAdoration += (1*giggleModifier);
-    selfWill --;
-    giggle++;
-    parentStress--;
-  }else if(giggle==10){
-      document.getElementById("giggleButton").innerHTML = "Laugh";
-      giggle++;
-    }else{
-    giggle += 2
-    parentsAdoration += (5*giggleModifier);
-    selfWill-= 5;
-    parentStress -=5;
-    }
-
-
+/*
+Function that is called from the game loop - determined by the laugh slider bar
+*/
+function laugh(){
+  /*
+    selfWill should decrement
+    laugh should increment
+    parentStress should decrement
+    parentsAdoration should increment
+  */
 }
+
 /*
 
 
 */
-function cryClick(){
-
-  if(cry < 10){
-    parentsAdoration--;
-    selfWill++;
-    cry++;
-    parentStress++;
-  }else if(cry==10){
-      document.getElementById("cryButton").innerHTML = "Wail";
-      cry++;
-    }else{
-    cry += 2
-    parentsAdoration -= 5;
-    selfWill+= 5;
-    parentStress +=5;
-    }
-
-
+function cry(){
+  /*
+    parentsAdoration should decrement
+    selfWill should increment
+    cry should increment
+    parentStress should increment
+  */
 }
 
 function babyWordsClick() {
