@@ -36,6 +36,10 @@ game.css holds all the css for elements related to the game <div>
   position: absolute;
 }
 
+#pAdorationValue {
+
+}
+
 /* directly under game */
 #selfWill{
   float:left;
@@ -52,6 +56,10 @@ game.css holds all the css for elements related to the game <div>
   font-weight: bold;
   bottom: 0px;
   position: absolute;
+
+}
+
+#selfWillValue {
 
 }
 
@@ -74,6 +82,10 @@ game.css holds all the css for elements related to the game <div>
 
 }
 
+#intelligenceValue {
+
+}
+
 /*Directly under #game*/
 #pottyTrain{
   float:left;
@@ -84,12 +96,16 @@ game.css holds all the css for elements related to the game <div>
 }
 
 /* directly under #pottyTrain */
-#pottyTrainText{
+#pottyTrainText {
   margin-left: 28px;
   font-size: 14px;
   font-weight: bold;
   bottom: 0px;
   position: absolute;
+
+}
+
+#pottyTrainValue {
 
 }
 
@@ -109,5 +125,9 @@ game.css holds all the css for elements related to the game <div>
   font-weight: bold;
   bottom: 0px;
   position: absolute;
+
+}
+
+#parentStressValue {
 
 }
