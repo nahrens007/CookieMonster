@@ -13,15 +13,25 @@ function: gameLoop():
  */
 function gameLoop() {
 
-  document.getElementById("pAdorationBar").style.height = parentsAdoration + "px";
-  document.getElementById("selfWillBar").style.height = selfWill + "px";
-  document.getElementById("intelligenceBar").style.height = intelligence + "px";
-  document.getElementById("pottyTrainBar").style.height = pottyTraining + "px";
-  document.getElementById("parentStressBar").style.height = parentStress + "px";
 
   cry();
 
+  /*
 
+
+  */
+  function cry() {
+    /*
+      parentsAdoration should decrement
+      selfWill should increment
+      cry should increment
+      parentStress should increment
+    */
+
+    var slider = document.getElementById("cryRange");
+    var output = document.getElementById("cryLevel");
+    output.innerHTML = slider.value;
+  }
 
 }
 
@@ -49,7 +59,7 @@ function initiateGame(){
   animateTape(storyText, 2400);
 
   /* game stats are updated once every 100ms  */
-  setInterval(function() { gameLoop(); }, 100);
+  setInterval(gameLoop, 100);
 }
 
 function sound(src) {
@@ -66,6 +76,10 @@ function sound(src) {
         this.sound.pause();
     }
 }
+
+
+
+
 /*
 Function that is called from the game loop - determined by the laugh slider bar
 */
@@ -79,25 +93,6 @@ function laugh(){
 
 }
 
-/*
-
-
-*/
-function cry(){
-  /*
-    parentsAdoration should decrement
-    selfWill should increment
-    cry should increment
-    parentStress should increment
-  */
-
-  var slider = document.getElementById("cryRange");
-  var output = document.getElementById("cryLevel");
-  output.innerHTML = slider.value;
-
-  output.innerHTML = this.value;
-  
-}
 
 function babyWordsClick() {
 
