@@ -34,7 +34,7 @@ which have been set by either setNameClick() or loadCookies()).
 function initiateGame(){
   //Shows the first buttons and set starting stats
 
-  document.getElementById("buttons").style.display = "inline";
+  document.getElementById("cryContainer").style.display = "inline";
 
   document.getElementById("gamePlayer").innerHTML = "Name: " + firstName;
   document.getElementById("gamePosition").innerHTML = "Position: " + position;

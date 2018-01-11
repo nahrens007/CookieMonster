@@ -12,15 +12,32 @@ babyStage.css contains everything related to the baby babyStage
   float: left;
 }
 
+#cryContainer{
+
+  width: 100px;
+  height: 400px;
+
+}
+
+#cry{
+
+  position: absolute;
+  top: 10px;
+
+}
+
 .slidecontainer {
-    width: 50px;
-    transform: rotateZ(270deg);
+    bottom: 20px;
+    width: 200px;
+
 }
 
 /* The slider itself */
 .slider {
-    width: 100%;
+    position: absolute;
+    width: 20%;
     height: 25px;
+    transform: rotateZ(270deg);
     background: #d3d3d3; /* Grey background */
     outline: none;
     -webkit-transition: .2s;
@@ -52,14 +69,4 @@ babyStage.css contains everything related to the baby babyStage
 /* under babyStage */
 #babyLabels{
   display: none;
-}
-
-/* under #buttons */
-.babyButtons{
-  border: outset;
-  background-color: #C2BEBD;
-
-}
-.babyButtons:active{
-  background-color: #A8A4A3;
 }
