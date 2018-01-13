@@ -13,6 +13,7 @@
     <!-- load javascript -->
     <script type="text/javascript" src="main.js"></script>
 
+    </script>
   </head>
 
   <body onload="bodyOnLoad()">
@@ -48,10 +49,10 @@
       <div id="babyStage">
         <div id="cryContainer">
           <span id="containerLabel">Cry</span>
-          <div class="slidecontainer" id="crySlideContainer">
+          <div class="slidecontainer" id="crySlideContainer" onmousemove="isCry">
             <input type="range" min="0" max="100" value="0" class="slider" id="cryRange">
           </div>
-          <span class="containerLevel" id="cryLevel">00%</span>
+          <span class="containerLevel" id="cryLevel"></span>
         </div>
 
         <div id="laughContainer">

@@ -1,5 +1,9 @@
+
 var firstName;
-var position;
+var position,output,slider,output1,slider2,output2,slider3,output3;
+var getSlider, sliderTotal, sliderAdjust;
+var cryBool,laughBool,babyWordsBool,pottyTrainBool;
+var chkTot = 100;
 var storyText = "All sounds are muted. The world around is warm and comforting but "+
   "strangely is not as roomy as you first remebered. Suddenly, a light appears and " +
   "you are thrust towards the light. You think to yourself, 'Here goes nothing...'";
@@ -13,14 +17,6 @@ function: gameLoop():
  */
 function gameLoop() {
 
-
-  cry();
-
-  /*
-
-
-  */
-  function cry() {
     /*
       parentsAdoration should decrement
       selfWill should increment
@@ -28,10 +24,16 @@ function gameLoop() {
       parentStress should increment
     */
 
-    var slider = document.getElementById("cryRange");
-    var output = document.getElementById("cryLevel");
-    output.innerHTML = slider.value;
-  }
+
+
+
+    output.innerHTML = slider.value + '%';
+    output1.innerHTML = slider1.value + '%';
+    output2.innerHTML = slider2.value + '%';
+    output3.innerHTML = slider3.value + '%';
+
+  
+
 
 }
 
@@ -55,11 +57,21 @@ function initiateGame(){
   document.getElementById("gamePlayer").style.display = "inline";
   document.getElementById("gamePosition").style.display = "inline";
 
+  slider = document.getElementById("cryRange");
+  output = document.getElementById("cryLevel");
+  slider1 = document.getElementById("laughRange");
+  output1 = document.getElementById("laughLevel");
+  slider2 = document.getElementById("babyWordsRange");
+  output2 = document.getElementById("babyWordsLevel");
+  slider3 = document.getElementById("pottyTrainRange");
+  output3 = document.getElementById("pottyTrainLevel");
+
+
   // Start ticker tape
   animateTape(storyText, 2400);
 
   /* game stats are updated once every 100ms  */
-  setInterval(gameLoop, 100);
+  setInterval(gameLoop, 10);
 }
 
 function sound(src) {
@@ -77,7 +89,9 @@ function sound(src) {
     }
 }
 
-
+function isCry(){
+  cryBool == true;
+}
 
 
 /*
@@ -93,6 +107,10 @@ function laugh(){
 
 }
 
+/*
+
+
+*/
 
 function babyWordsClick() {
 
