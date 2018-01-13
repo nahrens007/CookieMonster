@@ -30,9 +30,9 @@ function gameLoop() {
     output.innerHTML = slider.value + '%';
     output1.innerHTML = slider1.value + '%';
     output2.innerHTML = slider2.value + '%';
-    output3.innerHTML = slider3.value + '%';
+    //output3.innerHTML = slider3.value + '%';
 
-  
+    output3.innerHTML = $("#pottyTrainRange").val() + '%';
 
 
 }
